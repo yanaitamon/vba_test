@@ -12,3 +12,8 @@ Windows 7 Ultimate SP1, Excel 2007の環境で動作を確認しています。
 コマンドラインの例
 vbspastesave.vbs /template:"C:\work\test\vbs\Book2.xls" /macro:"func_paste_bmp_save" /filepath:"C:\work\test\vbs\test.bmp" /outfile:"C:\work\test\vbs\test_save.xls"
 
+VC++からVBSを実行したい場合は、下記のどちらかで。
+1.このコマンドラインをShellExecuteに渡す
+2.CreateProcessにしたい場合はwscript/cscriptをコマンドラインの頭につけて呼び出す
+  wscript vbspastesave.vbs /template:(the rest is omitted.)
+
