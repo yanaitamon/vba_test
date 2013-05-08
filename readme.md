@@ -38,3 +38,7 @@ http://www.atmarkit.co.jp/fwin2k/tutor/cformwsh09/cformwsh09_02.html
 http://ys21.org/html/vbs4bat.html  
 コマンドラインにエラーを返すには  
 http://wsh.style-mods.net/topic7.htm  
+エクセルのシートへ画像ファイルを挿入し、セルのサイズ（セル範囲）に合わせて拡大・縮小して貼り付けてくれるＶＢＡプログラム。  
+http://plaza.rakuten.co.jp/plaplanet2007/diary/200705100000/  
+Excel でブックを閉じるときに表示される "変更を保存しますか?" というメッセージを非表示にする方法  
+http://support.microsoft.com/kb/213428/ja  
