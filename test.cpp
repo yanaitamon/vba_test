@@ -1,3 +1,6 @@
+// 第1引数にコマンドラインを渡して下さい。
+// 例）
+// wscript vbspastesave.vbs /template:"C:\work\test\vbs\Book2.xls" /macro:"func_paste_bmp_save" /filepath:"C:\work\test\vbs\test.bmp" /outfile:"C:\work\test\vbs\test_save.xls"
 int CTestDlg::DoCommand( LPCTSTR lpszCmdLine )
 {
   DWORD ExitCode ;
