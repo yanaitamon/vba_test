@@ -1,0 +1,72 @@
+
+
+Public Sub save_test(outfile As String)
+On Error GoTo err
+    
+    ' ファイルにメッセージを書き出す
+    ' Open outfname For Output As #1
+    ' Print #1, msg
+    ' Close #1
+    
+    Application.Visible = False
+    ' MsgBox "受け取ったのは" & outfile & "です"
+    
+    ' 加工指示書の作成
+    Response = MsgBox(outfile + "を作成しますか？", vbYesNo)
+    If Response = vbNo Then
+        Exit Sub
+    End If
+    
+    ' 名前を付けて保存
+    ActiveWorkbook.SaveAs Filename:=outfile, _
+    FileFormat:=xlNormal, Password:="", WriteResPassword:="", _
+    ReadOnlyRecommended:=False, CreateBackup:=False
+    
+    ' 実行したら、Excelを終了する
+    Application.Quit
+    
+    Exit Sub
+
+err:
+    ' エラーのときは表示する
+    Application.Visible = True
+    MsgBox "An error occurred in Excel processing."
+End Sub
+
+Public Sub paste_bmp_test(str As String)
+
+    Application.Visible = False
+    
+    ' 加工指示書の作成
+    Response = MsgBox("加工指示書を作成しますか？", vbYesNo)
+    If Response = vbYes Then
+    
+        Range("C3").Select
+
+        Dim filePath As String
+        filePath = str
+        
+        MsgBox filePath, vbOKOnly, "確認です"
+        
+        ' 画像読込み
+        With ActiveSheet.Pictures.Insert(filePath)
+            .CopyPicture    ' クリップボードにコピー
+            .Delete         ' 画像を一旦削除
+            ' .Top = ActiveCell.Top
+            ' .Left = ActiveCell.Left
+        End With
+        ActiveSheet.Paste   ' 画像を貼り付け
+        
+        ' セレクト解除
+        Range("A1").Select
+
+    End If
+    
+    Exit Sub
+
+err:
+    ' エラーのときは表示する
+    Application.Visible = True
+    MsgBox "An error occurred in Excel processing."
+End Sub
+

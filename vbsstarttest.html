@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>calc(vbscript)</title>
+<script language="VBScript">
+Sub ExecCalc()
+  Dim WshShell
+  Set WshShell = CreateObject("Wscript.Shell")
+  Dim WshSysEnv
+  Set WshSysEnv = WshShell.Environment("USER")
+  
+  Dim strTestPath
+  strTestPath = WshSysEnv("TEST_PATH2")
+  strTestPath = strTestPath + "\vbspastebmp.vbs /template:Book1.xls /macro_p:paste_bmp_test /macro_s:save_test /filepath:test.bmp /outfile:test_save3.xls"
+  WshShell.Run strTestPath
+End Sub
+</script>
+</head>
+<body>
+<button onclick="vbscript:ExecCalc()">calc(vbscript)</button>
+</body>
+</html>
