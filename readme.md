@@ -66,3 +66,10 @@ paste_bmp_test：画像貼り付けのマクロ名
 save_test：名前をつけて保存のマクロ名  
 
 Book1.xlsを手元で作って、Book1_VBA_code.txtの内容を貼り付けてお使い下さい。  
+
+## vbsファイルを暗号化したい場合
+* WSHスクリプト・コードを暗号化する  
+  http://www.atmarkit.co.jp/fwin2k/win2ktips/443wshenc/wshenc.html  
+
+vbeファイルも、vbsファイルと同様に実行、動作します。
+
